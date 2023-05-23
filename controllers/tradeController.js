@@ -40,11 +40,18 @@ var buy = async (req, res) => {
     const price= user.price-(req.params.amount*trade.rate);
 
     if(price>0){
+        var obj = JSON.parse(user.shares);
+        var found=false
 
-        var jsonStr = user.shares;
-        var obj = JSON.parse(jsonStr);
-        obj.push({"sharename":trade.tradename,"amount":req.params.amount});
-
+        for (var i = 0; i < obj.length; i++){
+            if (obj[i].sharename == trade.tradename ){
+                found=true;
+                obj[i]={"sharename":trade.tradename,"amount":req.params.amount};
+            }
+        }
+        if(found==false){
+            obj.push({"sharename":trade.tradename,"amount":req.params.amount});
+        }
         await Users.update({price:price,shares:obj}, { where: { userid: req.params.id }})
 
         let response={
@@ -65,12 +72,15 @@ var sell = async (req, res) => {
     let user = await Users.findOne({ where: { userid: req.params.id }})
     let trade = await Trades.findOne({ where: { tradeid: req.params.tradeid }})
 
-    for (var i = 0; i < user.share.length; i++){
+    var obj = JSON.parse(user.shares);
+
+    for (var i = 0; i < obj.length; i++){
         if (obj[i].sharename == trade.tradename ){
             //found
             if(obj[i].amount>=req.params.amount){
+                obj[i].amount=obj[i].amount-req.params.amount
                 const price= user.price+(req.params.amount*trade.rate);
-                await Users.update({price:price,share:share}, { where: { userid: req.params.id }})
+                await Users.update({price:price,shares:obj}, { where: { userid: req.params.id }})
                 let response={
                     data: req.params.amount+" amount "+trade.tradename+' sold'
                 }
