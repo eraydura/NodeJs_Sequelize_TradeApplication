@@ -1,0 +1,1 @@
+# NodeJs_Sequelize_TradeApplication
