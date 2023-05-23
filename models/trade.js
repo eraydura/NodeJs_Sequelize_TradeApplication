@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
 
     const trade = sequelize.define("trade", {
         tradeid: {
-            type: DataTypes.INTEGER
+            type: DataTypes.TEXT
         },
         tradename: {
             type: DataTypes.TEXT

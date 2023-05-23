@@ -17,7 +17,7 @@ app.get("/",(res,resp)=>{
 app.get('/useradd/:price', Ctrl.addUser);
 app.get('/getuser/:id', Ctrl.getUser);
 app.get('/delete/:id', Ctrl.deleteUser);
-app.get('/userupdate/:id/:update', Ctrl.updateUser);
+app.get('/userupdate/:id/:price', Ctrl.updateUser);
 
 //Buy & Sell Operations
 app.get('/buy/:id/:tradeid/:amount', Ctrl.buy);

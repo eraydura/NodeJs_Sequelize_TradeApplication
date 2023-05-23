@@ -10,7 +10,7 @@ var addUser= async (req,resp)=>{
     let data = {
         userid: crypto.randomBytes(20).toString('hex'),
         price:  req.params.price,
-        shares:  '',
+        shares:  [],
     }
 
     await Users.create(data)
@@ -38,7 +38,7 @@ var buy = async (req, res) => {
     let user = await Users.findOne({ where: { userid: req.params.id }})
     let trade = await Trades.findOne({ where: { tradeid: req.params.tradeid }})
     const price= user.price-(req.params.amount*trade.rate);
-
+    
     if(price>0){
         var obj = JSON.parse(user.shares);
         var found=false
@@ -49,9 +49,11 @@ var buy = async (req, res) => {
                 obj[i]={"sharename":trade.tradename,"amount":req.params.amount};
             }
         }
+        
         if(found==false){
             obj.push({"sharename":trade.tradename,"amount":req.params.amount});
         }
+
         await Users.update({price:price,shares:obj}, { where: { userid: req.params.id }})
 
         let response={
@@ -149,7 +151,7 @@ var updateshare = async (req, res) => {
 
     await Trades.update({tradename:req.params.name,rate:req.params.rate}, { where: { tradeid: req.params.id }})
     let response={
-        data: req.params.name +' updated ' 
+        data: 'Share updated' 
     }
     res.status(200).send(response)
     
