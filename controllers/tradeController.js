@@ -106,13 +106,55 @@ var deleteUser = async (req, res) => {
     res.status(200).send(response)
 }
 
+//Update Users
+var updateUser = async (req, res) => {
+
+    await Users.update({price:req.params.price}, { where: { userid: req.params.id }})
+    let response={
+        data: req.params.id +' updated' 
+    }
+    res.status(200).send(response)
+    
+}
+
 //Show All Trades
-var showalltrades = async (req, res) => {
+var showallshares = async (req, res) => {
 
     const trades =  await Trades.findAll()
     res.status(200).send(trades)
     
 }
+
+//Create Trades
+var createshare = async (req, res) => {
+
+    let data = {
+        tradeid: crypto.randomBytes(20).toString('hex'),
+        tradename:  req.params.name,
+        rate:  req.params.rate,
+    }
+
+    await Trades.create(data)
+
+    let response={
+        data: req.params.name +' share is added the begining rate is' +req.params['rate'].toString()
+    }
+
+    res.status(200).json(response);
+    
+}
+
+//Update Trades
+var updateshare = async (req, res) => {
+
+    await Trades.update({tradename:req.params.name,rate:req.params.rate}, { where: { tradeid: req.params.id }})
+    let response={
+        data: req.params.name +' updated ' 
+    }
+    res.status(200).send(response)
+    
+}
+
 
 module.exports={
     addUser,
@@ -120,5 +162,8 @@ module.exports={
     sell,
     getUser,
     deleteUser,
-    showalltrades
+    showallshares,
+    updateshare,
+    createshare,
+    updateUser,
 }

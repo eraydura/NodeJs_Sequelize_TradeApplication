@@ -13,12 +13,20 @@ app.get("/",(res,resp)=>{
     resp.send("Home Page");
 });
 
+//User Operations
 app.get('/useradd/:price', Ctrl.addUser);
-app.get('/buy/:id/:tradeid/:amount', Ctrl.buy);
-app.get('/sell/:id/:tradeid/:amount', Ctrl.sell);
 app.get('/getuser/:id', Ctrl.getUser);
 app.get('/delete/:id', Ctrl.deleteUser);
-app.get('/showalltrades', Ctrl.showalltrades);
+app.get('/userupdate/:id/:update', Ctrl.updateUser);
+
+//Buy & Sell Operations
+app.get('/buy/:id/:tradeid/:amount', Ctrl.buy);
+app.get('/sell/:id/:tradeid/:amount', Ctrl.sell);
+
+//Share Operations
+app.get('/showallshares', Ctrl.showallshares);
+app.get('/createshare/:name/:rate', Ctrl.createshare);
+app.get('/updateshare/:id/:name/:rate', Ctrl.updateshare);
 
 //port
 const PORT = process.env.PORT || 8080
