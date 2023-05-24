@@ -36,8 +36,12 @@ It is the trade application. MySQL Database and NodeJs have been used for this p
 
 <img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/CreateShare.png?raw=true" width ="450" /> <img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/ShowAllShare.png?raw=true" width ="450" /><img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/UpdateShare.png?raw=true" width ="450" /> 
 
-#Buy & Sell CRUD Operations(Postman Outputs)
+#Buy CRUD Operations(Postman Outputs)
 
-<img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/CreateShare.png?raw=true" width ="450" /> <img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/ShowAllShare.png?raw=true" width ="450" /><img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/UpdateShare.png?raw=true" width ="450" /> 
+<img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/BuyOperation.png?raw=true" width ="450" /> <img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/AfterBuyOperation.png?raw=true" width ="450" />
+
+#Sell CRUD Operations(Postman Outputs)
+
+<img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/SellOperation.png?raw=true" width ="450" /> <img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/AfterSellingOperation.png?raw=true" width ="450" /> 
 
 
