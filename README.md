@@ -24,4 +24,4 @@ Our Trade model:
         }
         
 User CRUD Operations(Postman Outputs)
-![alt-text-1](https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/UserUpdate.png?raw=true "title-1") ![alt-text-2](https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/UserUpdate.png?raw=true "title-2")![alt-text-3](https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/UserUpdate.png?raw=true "title-3")
+<img src = "[screenshots/tool.png](https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/UserUpdate.png?raw=true)" width ="200" /> <img src = "[screenshots/world_flash.png](https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/UserUpdate.png?raw=true)" width ="200" />
