@@ -2,7 +2,7 @@
 
 It is the trade application. MySQL Database and NodeJs have been used for this project. ORM tool: Sequelize. And also, Postman outputs are provided.
 
-Our User model:        
+#Our User model:        
         
         userid: {
             type: DataTypes.TEXT(random cypto)
@@ -14,7 +14,7 @@ Our User model:
             type: DataTypes.JSON
         }
         
-Our Trade model:
+#Our Trade model:
         
         tradeid: {
             type: DataTypes.TEXT(random cypto)
@@ -26,10 +26,18 @@ Our Trade model:
             type: DataTypes.FLOAT
         }
         
-User CRUD Operations(Postman Outputs)
+#User CRUD Operations(Postman Outputs)
 
 <img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/CreateUser.png?raw=true" width ="450" /> <img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/GetFirstUser.png?raw=true" width ="450" />
 
 <img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/UserUpdate.png?raw=true" width ="450" /> <img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/GetFirstUser.png?raw=true" width ="450" />
+
+#Trade CRUD Operations(Postman Outputs)
+
+<img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/CreateShare.png?raw=true" width ="450" /> <img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/ShowAllShare.png?raw=true" width ="450" /><img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/UpdateShare.png?raw=true" width ="450" /> 
+
+#Buy & Sell CRUD Operations(Postman Outputs)
+
+<img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/CreateShare.png?raw=true" width ="450" /> <img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/ShowAllShare.png?raw=true" width ="450" /><img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/UpdateShare.png?raw=true" width ="450" /> 
 
 
