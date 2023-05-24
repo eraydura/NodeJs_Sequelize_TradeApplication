@@ -38,7 +38,7 @@ var buy = async (req, res) => {
     let user = await Users.findOne({ where: { userid: req.params.id }})
     let trade = await Trades.findOne({ where: { tradeid: req.params.tradeid }})
     const price= user.price-(req.params.amount*trade.rate);
-    
+
     if(price>0){
         var obj = JSON.parse(user.shares);
         var found=false
@@ -57,7 +57,7 @@ var buy = async (req, res) => {
         await Users.update({price:price,shares:obj}, { where: { userid: req.params.id }})
 
         let response={
-            data: req.params.amount+" amount "+trade.tradename+' brought'
+            data: req.params.amount+" amount "+trade.tradename+' bought'
         }
         res.status(200).send(response)
     }else{
