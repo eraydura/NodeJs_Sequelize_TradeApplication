@@ -3,6 +3,7 @@
 It is the trade application. MySQL Database and NodeJs have been used for this project. ORM tool: Sequelize. And also, Postman outputs are provided.
 
 Our User model:        
+        
         userid: {
             type: DataTypes.TEXT(random cypto)
         },
@@ -12,7 +13,9 @@ Our User model:
         shares: {
             type: DataTypes.JSON
         }
+        
 Our Trade model:
+        
         tradeid: {
             type: DataTypes.TEXT(random cypto)
         },
@@ -24,6 +27,8 @@ Our Trade model:
         }
         
 User CRUD Operations(Postman Outputs)
-<img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/UserUpdate.png?raw=true" width ="250" /> 
+<div style="display: flex; flex-direction: row;">
+<img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/UserUpdate.png?raw=true"  /> 
 <img src = "https://github.com/eraydura/NodeJs_Sequelize_TradeApplication/blob/main/PostManOutputs/GetFirstUser.png?raw=true" width ="250" />
-<img src = "https://raw.githubusercontent.com/eraydura/NodeJs_Sequelize_TradeApplication/main/PostManOutputs/CreateUser.png" width ="250" />
+</div>
+
